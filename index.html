@@ -1,260 +1,320 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <!-- META BÁSICOS -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>
+    Aumenta tus ventas un 50% con nuestro Curso de Marketing Digital
+  </title>
+  <meta name="description"
+    content="Aprende SEO, SEM, redes sociales y analítica en 8 semanas. Certificación oficial y proyectos reales." />
+  <meta name="keywords" content="Marketing Digital, Curso Online, SEO, SEM, Social Media, Analítica, Certificación" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tudominio.com/curso-marketing-digital" />
+
+  <!-- SOCIAL & OPEN GRAPH -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tudominio.com/curso-marketing-digital" />
+  <meta property="og:title" content="Aumenta tus ventas un 50% con nuestro Curso de Marketing Digital" />
+  <meta property="og:description" content="Domina SEO, SEM, Social Media y Analítica en 8 semanas. Inscríbete hoy!" />
+  <meta property="og:image" content="https://source.unsplash.com/1200x630/?digital-marketing,online-course" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@MarketingAcademy" />
+  <meta name="twitter:title" content="Aumenta tus ventas un 50% con nuestro Curso de Marketing Digital" />
+  <meta name="twitter:description" content="Curso práctico con certificación oficial y proyectos reales." />
+  <meta name="twitter:image" content="https://source.unsplash.com/1200x630/?marketing,certificate" />
+
+  <!-- SCHEMA JSON-LD -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Curso Profesional de Marketing Digital",
+        "description": "Aprende SEO, SEM, Social Media y Analítica con certificación.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Marketing Academy",
+          "sameAs": "https://tudominio.com"
+        }
+      }
+    </script>
+
+  <!-- PRECONNECT / PREFETCH -->
+  <link rel="preconnect" href="https://source.unsplash.com" />
+  <link rel="dns-prefetch" href="https://source.unsplash.com" />
+
+  <!-- PREFETCH DE RUTAS IMPORTANTES -->
+  <link rel="prefetch" href="https://tudominio.com/registro" />
+
+  <!-- BOOTSTRAP & ICONS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- CUSTOM CSS -->
   <style>
     body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f5f7fa;
-    color: #333;
-    box-sizing: border-box;
-}
-
-.hero {
-    background: url(../Images/ChatGPT\ Image\ 11\ may\ 2025\,\ 07_34_21\ p.m..png) center/cover no-repeat;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    position: relative;
-    flex-direction: column;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-
-.signUp {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: #0d6efd;
-    color: #fff;
-    padding: 13px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-    z-index: 1001;
-}
-
-.signUp:hover {
-    background: #0b5ed7;
-}
-
-.hero-content {
-    text-align: center;
-    padding: 2rem 1rem;
-    color: white;
-    z-index: 1001;
-}
-
-.hero-content h1 {
-    font-size: 2.5rem;
-    font-weight: 400;
-}
-
-.hero-content p {
-    font-size: 1.3rem;
-    font-weight: 100;
-}
-
-/* Tarjetas */
-
-.container {
-    max-width: 800px;
-    margin: auto;
-    padding: 2rem;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.iconos-info {
-    width: 30px;
-    height: auto;
-    margin-right: 8px;
-    vertical-align: middle;
-}
-
-.grid-beneficios {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-items: center;
-    margin-top: 30px;
-}
-.tarjeta:nth-child(1),
-.tarjeta:nth-child(2) {
-    font-size: 1.3rem;
-}
-
-.tarjeta:nth-child(3) {
-    grid-column: 1 / -1;
-    font-size: 1.3rem;
-}
-
-@media (max-width: 768px) {
-    .grid-beneficios {
-        grid-template-columns: 1fr;
-        justify-content: center;
+      font-family: "Inter", sans-serif;
+      scroll-behavior: smooth;
     }
 
-    .tarjeta:nth-child(3) {
-        grid-column: auto;
+    .navbar {
+      background: #fff;
     }
-}
 
-.tarjeta {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 100%;
-    max-width: 300px;
-}
+    .nav-link {
+      color: #333 !important;
+    }
 
-.info {
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
+    .hero {
+      position: relative;
+      height: 90vh;
+      background: url("https://source.unsplash.com/1600x900/?classroom,online") center/cover no-repeat;
+    }
 
-.image-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    margin-bottom: 100px;
-}
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
 
-.image-section img {
-    max-width: 100%;
-    width: 320px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+    }
 
-.image-section blockquote {
-    flex: 1;
-    font-size: 1.4rem;
-    font-style: italic;
-    line-height: 1.6;
-    background: #fcfcfc;
-    padding: 1.5rem;
-    border-radius: 8px;
-    
-}
+    .hero-content h1 {
+      font-size: 3rem;
+    }
 
-#signUp {
-    background: #fcfcfc;
-    padding: 2rem;
-    border-radius: 10px;
-    max-width: 500px;
-    margin: 0 auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
+    .feature-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
 
-#signUp input {
-    padding: 0.8rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: boder-color 0.3s ease;
-}
+    section {
+      padding: 4rem 0;
+    }
 
-#signUp input:focus {
-    border-color: #0d6efd;
-    outline: none;
-}
-
-#signUp button {
-    padding: 0.9rem 1rem;
-    background: #0b5ed7;
-    color: #fff;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#signUp button:hover {
-    background: #0d6efd;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #888;
-}
+    form input {
+      margin-bottom: 1rem;
+    }
   </style>
+
+  <!-- GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-XXXXX-Y");
+  </script>
+  <!-- HOTJAR -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj =
+        h.hj ||
+        function () {
+          (h.hj.q = h.hj.q || []).push(arguments);
+        };
+      h._hjSettings = { hjid: XXXXXX, hjsv: 6 };
+      a = o.getElementsByTagName("head")[0];
+      r = o.createElement("script");
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+  </script>
 </head>
 
-<body>
-
-  <header class="hero">
-    <a href="https://wa.me/50372945029?text=Hola,%20me%20interesa%20la%20landing" target="_blank" class="signUp">Un Landing page</a>
-    <div class="hero-content">
-      <h1>Curso gratis de Marketing Digital</h1>
-      <p>El curso gratuito que te enseñará a destacarte en un mundo donde todo se mueve online.</p>
-    </div>
-  </header>
-
-  <div class="container">
-    <div class="info">
-      <h2>¿Qué aprenderás?</h2>
-      <div class="grid-beneficios">
-        <div class="tarjeta">
-          <img src="../Images/ChatGPT Image 11 may 2025, 08_19_11 p.m..png" alt="Icono" class="iconos-info">
-          <p>Crear campañas efectivas en redes sociales </p>
-          </div>
-        <div class="tarjeta">
-          <img src="../Images/ChatGPT Image 11 may 2025, 08_19_11 p.m..png" alt="Icono" class="iconos-info">
-          <p>Entender cómo funciona el marketing digital </p>
-          </div>
-        <div class="tarjeta">
-          <img src="../Images/ChatGPT Image 11 may 2025, 08_12_52 p.m..png" alt="Icono" class="iconos-info">
-          <p>Usar herramientas gratuitas para promocionar tu negocio </p>
-          </div>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
+  <!-- NAVBAR -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">Marketing Academy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#beneficios">Beneficios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#curriculum">Temario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#inscripcion">Inscripción</a>
+          </li>
+        </ul>
       </div>
     </div>
+  </nav>
 
-    <div class="image-section">
-      <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=800&q=80"alt="Curso de Marketing">
-      <blockquote>Una base sólida en marketing digital puede abrirte puertas que ni imaginabas… si te atreves a comenzar.</blockquote>
+  <!-- HERO + FORM ABOVE THE FOLD -->
+  <section class="hero d-flex align-items-center">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Aumenta tus ventas un 50% en 8 semanas</h1>
+      <p class="lead mb-4">
+        Curso de Marketing Digital: SEO, SEM, Social Media y Analítica con
+        certificación oficial.
+      </p>
+      <form class="row justify-content-center" action="https://tudominio.com/registro" method="POST"
+        style="max-width: 500px">
+        <div class="col-12 col-md-6">
+          <input type="text" name="nombre" class="form-control" placeholder="Nombre" required />
+        </div>
+        <div class="col-12 col-md-6">
+          <input type="email" name="email" class="form-control" placeholder="Correo electrónico" required />
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary btn-lg">
+            Quiero mi cupo
+          </button>
+        </div>
+        <small class="text-white-50 mt-2">No compartimos tu información.</small>
+      </form>
     </div>
+  </section>
 
-    <form action="https://formspree.io/f/xeoglvjp" method="post" id="signUp">
-      <input type="text" name="name" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo electrónico" required>
-      <button type="submit">¡Acceder Gratis!</button>
-    </form>
-  </div>
+  <main class="container">
+    <!-- BENEFICIOS -->
+    <section id="beneficios">
+      <h2 class="text-center mb-4">¿Qué aprenderás?</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="text-center">
+            <i class="fas fa-search fa-2x mb-2"></i>
+            <h5>SEO Avanzado</h5>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="text-center">
+            <i class="fas fa-bullhorn fa-2x mb-2"></i>
+            <h5>SEM Efectivo</h5>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="text-center">
+            <i class="fas fa-users fa-2x mb-2"></i>
+            <h5>Social Media</h5>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="text-center">
+            <i class="fas fa-chart-line fa-2x mb-2"></i>
+            <h5>Analítica Web</h5>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    &copy; 2025 TuNombre | Todos los derechos reservados
+    <!-- CURRICULUM -->
+    <section id="curriculum">
+      <h2 class="text-center mb-4">Temario del curso</h2>
+      <ul class="list-group mb-4">
+        <li class="list-group-item">Módulo 1: Fundamentos y Tendencias</li>
+        <li class="list-group-item">Módulo 2: SEO On-Page & Off-Page</li>
+        <li class="list-group-item">
+          Módulo 3: Publicidad en Buscadores (SEM)
+        </li>
+        <li class="list-group-item">Módulo 4: Estrategias en Social Media</li>
+        <li class="list-group-item">
+          Módulo 5: Email Marketing & Automatización
+        </li>
+        <li class="list-group-item">Módulo 6: Analítica & Métricas</li>
+        <li class="list-group-item">Proyecto Final: Plan Integral</li>
+      </ul>
+    </section>
+
+    <!-- PRUEBA SOCIAL -->
+    <section id="testimonios">
+      <h2 class="text-center mb-4">Testimonios de Alumnos</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://source.unsplash.com/400x300/?student,portrait" class="card-img-top"
+              alt="Alumno satisfecho" loading="lazy" />
+            <div class="card-body">
+              <p>
+                “Gracias a este curso, mi negocio creció un 60% en tres
+                meses.”
+              </p>
+              <h6 class="fw-bold">- Ana Pérez</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://source.unsplash.com/400x300/?woman,student" class="card-img-top" alt="Estudiante feliz"
+              loading="lazy" />
+            <div class="card-body">
+              <p>
+                “La metodología práctica marcó la diferencia en mi
+                aprendizaje.”
+              </p>
+              <h6 class="fw-bold">- Carlos López</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://source.unsplash.com/400x300/?man,student" class="card-img-top" alt="Estudiante exitoso"
+              loading="lazy" />
+            <div class="card-body">
+              <p>
+                “Las herramientas compartidas son las mismas que usan las
+                grandes empresas.”
+              </p>
+              <h6 class="fw-bold">- María Gómez</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICACIONES / LOGOS -->
+    <section id="confianza" class="text-center my-5">
+      <h2 class="mb-4">Empresas que nos avalan</h2>
+      <div class="d-flex justify-content-center align-items-center flex-wrap gap-4">
+        <img src="https://source.unsplash.com/100x60/?logo1" alt="Logo Empresa 1" loading="lazy" />
+        <img src="https://source.unsplash.com/100x60/?logo2" alt="Logo Empresa 2" loading="lazy" />
+        <img src="https://source.unsplash.com/100x60/?logo3" alt="Logo Empresa 3" loading="lazy" />
+        <img src="https://source.unsplash.com/100x60/?logo4" alt="Logo Empresa 4" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- INSCRIPCIÓN -->
+    <section id="inscripcion" class="text-center mb-5">
+      <h2 class="mb-3">Reserva tu lugar</h2>
+      <p>
+        Plazas limitadas. Acceso inmediato a materiales y comunidad exclusiva.
+      </p>
+      <a href="https://tudominio.com/registro" class="btn btn-primary btn-lg">Inscríbete ahora</a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-4">
+    <p class="mb-1">
+      &copy; 2025 Marketing Academy. Todos los derechos reservados.
+    </p>
+    <small>info@tudominio.com | +503 1234 5678</small>
   </footer>
-  
+
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" async></script>
 </body>
 
 </html>
